@@ -8,5 +8,5 @@ total = 0
 for i in range (1 , n):
     if ((i % 3 == 0) or (i % 5 == 0)):
         total += i
-
+#    print i
 print "The sum of all multiples of 3 or 5 below %d is %d" % (n, total)
