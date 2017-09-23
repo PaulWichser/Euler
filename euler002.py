@@ -26,4 +26,5 @@ def evensum(m):
             total += m[i]
     return total
 
+
 print "\nThe sum of all even numbers in the Fibonacci sequence under %d is %d" % (n, evensum(fibo(n)))
