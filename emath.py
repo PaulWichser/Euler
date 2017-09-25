@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Math functions I've used while solving Euler problems
+# Math functions I've used while solving Euler problems that I'd like to use again
 
 def isfactor(num,fac):  #checks whether fac is a factor of num
     if not num % fac:
@@ -9,6 +9,8 @@ def isfactor(num,fac):  #checks whether fac is a factor of num
         return 0
 
 def isprime(num,primelist): #checks whether num is a prime number. Pass a list of known primes to primelist to speed up
+    #TODO: develop a way for isprime to accept empty or full prime number lists. Currently only works with [2]
+
     # if not primelist:
     #     i = 3
     #     if not num % 2:
@@ -29,3 +31,17 @@ def isprime(num,primelist): #checks whether num is a prime number. Pass a list o
             if not num % primelist[i]:
                 return 0
         return 1
+
+def ispalendrome(num):  #checks whether int num is a palendrome
+    if isinstance(num, int):
+        numlist = list(str(num))
+        i = 0
+#        print len(numlist)
+        while i < (len(numlist)/2):
+#            print i
+            if numlist[i] != numlist[0 - (i + 1)]:
+                return 0
+            i += 1
+        return 1
+    else:
+        return 0
